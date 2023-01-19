@@ -1,5 +1,5 @@
 import socket # this socket function is used to bulid the network connectivity
-import threading # Threading function is used to setup the target of the server side like start and stop
+import threading # Threading function is used to setup the target between server side and client side.
 
 HOST = '10.0.0.84'# host is ip address of the client machine
 PORT = 9090 # port is port address of the client machine
@@ -17,9 +17,9 @@ def broadcast(message): # here broadcast is casting the network of the client li
     for client in clients:
         client.send(message)
 
-def handle(client): # handle function is handling the client side
+def handle(client): # handle function is used to handling the client side
     while True:
-        try:    # here i used try and except in which the client didn't recevie the message it will never show any error because index function will handle it
+        try:    # here i used try and except in which the client didn't recevie any message and it will never show any error because index function will handle it
             message = client.recv(1024)
             print(f'{nicknames[clients.index(client)]} says {message}')
             broadcast(message)
@@ -32,7 +32,7 @@ def handle(client): # handle function is handling the client side
             break
 
 
-def receive(): # receive function is to recevie the request of the client and server side im which it will print that server is runing
+def receive(): # receive function is to recevie the request of the client and server side in which it will print that server is runing
     while True:
         client, address = server.accept()
         print(f'Connect with {str(address)}')
