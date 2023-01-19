@@ -19,7 +19,7 @@ def broadcast(message): # here broadcast is casting the network of the client li
 
 def handle(client): # handle function is used to handling the client side
     while True:
-        try:    # here i used try and except in which the client didn't recevie any message and it will never show any error because index function will handle it
+        try:    # here i used try and except function in which the client didn't recevie any message and it will never show any error because index function will handle it
             message = client.recv(1024)
             print(f'{nicknames[clients.index(client)]} says {message}')
             broadcast(message)
