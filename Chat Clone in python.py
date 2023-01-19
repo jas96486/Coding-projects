@@ -1,5 +1,5 @@
 import socket # this socket function is used to bulid the network connectivity
-import threading # Threading function is used to setup the target between server side and client side.
+import threading # Threading function is used to setup the target between server and client side.
 
 HOST = '10.0.0.84'# host is ip address of the client machine
 PORT = 9090 # port is port address of the client machine
