@@ -3,13 +3,13 @@ from  vidstream import CameraClient # This vidstream is library in which you can
 from  vidstream import StreamingServer
 
 import threading # Threading function is used to setup the target between server and client side
-import time # time function is used to log the time between both sides like how much time they will connect
+import time # time function is used to log the time between both sides like how much time they will connect to each other
 
 r1 = StreamingServer('10.0.0.84',9999) # streaming server is a server address 
 s1 = CameraClient('10.0.0.84',9999) # Cameraclient is a client address
 
 t1 = threading.Thread(target=r1.start_server)
-t1.start()  # start function is used to start the connect between server side
+t1.start()  # start function is used to start the connection between server and client side
 
 time.sleep(2)
 
