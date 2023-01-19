@@ -2,8 +2,8 @@
 from  vidstream import CameraClient # This vidstream is library in which you can create a camera
 from  vidstream import StreamingServer
 
-import threading # Threading function is used to setup the target of the server side like start and stop
-import time # time function is used to create the time between both sides like how much time they will connect
+import threading # Threading function is used to setup the target between server and client side
+import time # time function is used to log the time between both sides like how much time they will connect
 
 r1 = StreamingServer('10.0.0.84',9999) # streaming server is a server address 
 s1 = CameraClient('10.0.0.84',9999) # Cameraclient is a client address
@@ -19,5 +19,5 @@ t2.start()
 while input("") != "STOP":
     continue
 
-r1.stop_server() # stop function is used to stop the coonection between server side
+r1.stop_server() # stop function is used to stop the coonection between server and client side
 s1.stop_stream()
