@@ -1,17 +1,18 @@
+# The quiz game is updated version of my old project which name is Quiz game_1
 print("Welcome to python Quiz \n")
 playing=input("Do you want to play? \n ")
-if playing.lower()!="yes":
+if playing.lower()!="yes": # Here if and else function is used for condition statement
     quit()
 else:
     username=input("Enter your username: ")
     print(str(username) + " Lets Start the quiz \n")
 
 
-class Question:
+class Question: # Class Function is used to bulid an own function like i created prompt and answer
      def _init_(self, prompt, answer):
           self.prompt = prompt
           self.answer = answer
-
+# Here i used question_prompts function for all questions and it will print the question according to the serial wise
 question_prompts = [
     "Who developed python language?: \n",
     "Is python case sensitive when dealing with identifiers?: \n",
@@ -27,7 +28,7 @@ question_prompts = [
 ]
 
 questions = [
-    Question(question_prompts[0], "guido van rossum"),
+    Question(question_prompts[0], "guido van rossum"), # Here i put the question number used by index function and also provide their answers
     Question(question_prompts[1], "no"),
     Question(question_prompts[2], "lambda"),
     Question(question_prompts[3], "preferred installer program"),
@@ -40,12 +41,12 @@ questions = [
 
 
 ]
-
+#  run_quiz function is used to arrange all the questions
 def run_quiz(questions):
      score = 0
      for question in questions:
-          answer = input(question.prompt)
-          if answer.lower() == question.answer:
+          answer = input(question.prompt) # input function is used to put the answer in the blank area
+          if answer.lower() == question.answer: # lower function is used for case sensitive such as lowercase and uppercase letter
                score += 1
                print("your answer " + str(answer) + " is correct\n")
           else:
@@ -60,4 +61,4 @@ def run_quiz(questions):
      else:
          print("Need more practice")
 
-run_quiz(questions)
+run_quiz(questions) #  run_quiz function will run all the questions one by one 
