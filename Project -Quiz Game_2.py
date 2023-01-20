@@ -12,7 +12,7 @@ class Question: # Class Function is used to bulid an own function like i created
      def _init_(self, prompt, answer):
           self.prompt = prompt
           self.answer = answer
-# Here i used question_prompts function for all questions and it will print the question according to the serial wise
+# Here i used question_prompts function for all questions and it will print all the questions according to the serial wise
 question_prompts = [
     "Who developed python language?: \n",
     "Is python case sensitive when dealing with identifiers?: \n",
