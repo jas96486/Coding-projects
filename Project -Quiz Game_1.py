@@ -143,7 +143,8 @@ elif question10 != (answer10):
     score=score
 print("The End ")
 print("           ")
-# print command is used to printing the score and also if the score range is 6 to 10 then it will print "Good Score" otherwise it will print "Need more practice"
+# print command is used to printing the score and also if the score range is 10 it will print "Perfect Score",
+# or if the score range between 6 to 10 then it will print "Good Score" or less than 6 it will print "Need more practice"
 print(str(username) + " got "+ str(score) + " questions correct out of 10")
 percent = (str(username) + " you got "+ str(score/10 * 100) + " percent")
 print(percent)
