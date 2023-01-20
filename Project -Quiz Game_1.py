@@ -1,5 +1,6 @@
+# This quiz game is basically a quiz which based on the python knowledge 
 print("welcome to the python quiz")
-# want to play or not
+# It will ask you want to play or not
 playing=input("Do you want to play? ")
 if playing.lower()!="yes":
   quit()
@@ -7,10 +8,10 @@ else:
     username = input("Enter your username: ")
     print(str(username) + " Lets Start the quiz")
 print("           ")
-# score
+# This score Function will count your numbers that how much you score in the quiz
 score = 0
 
-#answers
+#The answers Function will provide you an answer of that question which one is wrong and give you correct answer
 answer1="guido van rossum"
 answer2="no"
 answer3="lambda"
@@ -21,11 +22,12 @@ answer7=9
 answer8="turtle.bgcolor()"
 answer9=1991
 answer10="constructor"
-# code for each questions
-# 1
+# Here i used the question function for each questions and providing the number according to serial wise
+# 1 
+# if and elif Function is used for condition statement
 question1 = input("Who developed python language? : ")
-if question1.lower() == (answer1):
-    print("Your answer " + str(question1) + " is correct")
+if question1.lower() == (answer1): 
+    print("Your answer " + str(question1) + " is correct") 
     print("           ")
     score += 1
 elif question1 != (answer1):
@@ -34,8 +36,9 @@ elif question1 != (answer1):
     print("           ")
     score=score
 #2
+# lower function is used for case sensitive
 question2 = input("Is python case sensitive when dealing with identifiers? : ")
-if question2.lower() == (answer2):
+if question2.lower() == (answer2): 
     print("Your answer " + str(question2) + " is correct")
     print("           ")
     score += 1
@@ -45,6 +48,7 @@ elif question2 != (answer2):
     print("           ")
     score=score
 #3
+# == and != both sign is used for comparsion 
 question3 = input("Python supports the creation of anonymous functions at runtime using a construct called------ : ")
 if question3.lower() == (answer3):
     print("Your answer " + str(question3) + " is correct")
@@ -139,7 +143,7 @@ elif question10 != (answer10):
     score=score
 print("The End ")
 print("           ")
-#Final print command
+# print command is used to printing the score and also if the score range is 6 to 10 then it will print "Good Score" otherwise it will print "Need more practice"
 print(str(username) + " got "+ str(score) + " questions correct out of 10")
 percent = (str(username) + " you got "+ str(score/10 * 100) + " percent")
 print(percent)
