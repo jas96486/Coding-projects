@@ -19,7 +19,7 @@ def broadcast(message): # here broadcast is casting the network of the client
 
 def handle(client): 
     while True:
-        try:    
+        try:    # try and except function is used for stopping any error message between client side and server side
             message = client.recv(1024)
             print(f'{nicknames[clients.index(client)]} says {message}')
             broadcast(message)
