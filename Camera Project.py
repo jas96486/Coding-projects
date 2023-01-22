@@ -1,5 +1,5 @@
 # This application is created to have connection between client side and server side in which they both connected to each other by using the help of vidstream libary.
-from  vidstream import CameraClient # This vidstream is library in which you can create a camera function
+from  vidstream import CameraClient # vidstream is a library, which is used here to create camera function
 from  vidstream import StreamingServer
 
 import threading # Threading function is used to setup the target between server and client side
