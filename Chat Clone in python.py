@@ -7,19 +7,19 @@ PORT = 9090 # port is port address of the client machine
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind(HOST, PORT)
 
-server.listen() # listen function is listening the request of the server and client side
+server.listen() 
 
 clients = []
 nicknames = []
 
 
-def broadcast(message): # here broadcast is casting the network of the client like sending messages
+def broadcast(message): # here broadcast is casting the network of the client
     for client in clients:
         client.send(message)
 
-def handle(client): # handle function is used to handling the client side
+def handle(client): 
     while True:
-        try:    # here i used try and except function in which the client didn't recevie any message and it will never show any error because index function will handle it
+        try:    
             message = client.recv(1024)
             print(f'{nicknames[clients.index(client)]} says {message}')
             broadcast(message)
@@ -32,7 +32,7 @@ def handle(client): # handle function is used to handling the client side
             break
 
 
-def receive(): # receive function is to recevie the request of the client and server side in which it will print that server is runing
+def receive(): # receive function is to used to check client and server status
     while True:
         client, address = server.accept()
         print(f'Connect with {str(address)}')
