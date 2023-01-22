@@ -1,6 +1,6 @@
-# This quiz game is basically a quiz which based on the python knowledge 
+# This quiz game is test of python language
 print("welcome to the python quiz")
-# It will ask you want to play or not
+# It will ask if you want to play or not
 playing=input("Do you want to play? ")
 if playing.lower()!="yes":
   quit()
@@ -8,10 +8,10 @@ else:
     username = input("Enter your username: ")
     print(str(username) + " Lets Start the quiz")
 print("           ")
-# This score Function will count your numbers that how much you score in the quiz
+# This score Function will count your scores using numbers
 score = 0
 
-#The answers Function will provide you an answer of that question which one is wrong and give you correct answer
+#The answers Function will provide either your answer right or wrong, if wtrong it will provide you correct answer
 answer1="guido van rossum"
 answer2="no"
 answer3="lambda"
@@ -143,7 +143,7 @@ elif question10 != (answer10):
     score=score
 print("The End ")
 print("           ")
-# print command is used to printing the score and also if the score range is 10 it will print "Perfect Score",
+# print command is used to publish the score and also if the score range is 10 it will print "Perfect Score",
 # or if the score range between 6 to 10 then it will print "Good Score" or less than 6 it will print "Need more practice"
 print(str(username) + " got "+ str(score) + " questions correct out of 10")
 percent = (str(username) + " you got "+ str(score/10 * 100) + " percent")
