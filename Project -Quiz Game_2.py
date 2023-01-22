@@ -1,4 +1,4 @@
-# The quiz game is updated version of my old project which name is Quiz game_1
+# The quiz game is updated and compact version of my old project - Quiz game_1
 print("Welcome to python Quiz \n")
 playing=input("Do you want to play? \n ")
 if playing.lower()!="yes": # Here if and else function is used for condition statement
